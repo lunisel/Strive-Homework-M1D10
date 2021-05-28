@@ -97,10 +97,11 @@
             table{
                 border: solid black 2px;
                 width: 90%;
-                height: 100vw;
+                height: 10vw;
+                padding: 20px;
                 border-collapse: separate;
                 border-radius: 30px;
-                padding: 5px;
+                text-align: center;
             }
             td {
                 border-collapse: collapse;
@@ -154,6 +155,7 @@
                 <li><a class="link" href="#lavander">Lavander</a></li>
             </ul>
             <button onclick="removeImages()">Remove Images</button>
+            <button onclick="removeTable()">Remove Table</button>
         </div>
         <table>
             <tr class="dotted">
@@ -349,6 +351,24 @@ const removeImages = function(onclick){
         images[i].src = ""
     }
 }
+console.log("Exercise 43")
+const removeTable = function(){
+    let table = document.getElementsByTagName("table")[0]
+    console.log(table.style.display)
+    if(table.style.display === "none"){
+        table.style.display = "table"
+    } else {
+        table.style.display = "none"
+    }
+}
+console.log("Exercise 44")
+const sumTd = function(){
+    let td = document.getElementsByTagName("td")
+    sum = parseInt(td[0].innerHTML) + parseInt(td[2].innerHTML) + parseInt(td[3].innerHTML) + parseInt(td[4].innerHTML)
+    console.log(sum)
+}
+sumTd()
+console.log("Exercise 45")
 
     </script>
     </body>
