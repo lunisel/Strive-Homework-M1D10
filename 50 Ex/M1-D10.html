@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <!--
+
+        HTML EXERCISES
+
+        1) Create a title for the page -
+        2) Create a heading -
+        3) Create an ordered list -
+        4) Create a table with 5 columns and 4 rows -
+        5) Add an image to each second cell of every row -
+        6) Add a anchor link for every image -
+        7) Merge together 2 table cells -
+        8) Divide the page using a horizontal line -
+        9) Create a container with a nested paragraph and a nested unordered list -
+        10) Create a footer with some information about the page creator -
+
+        CSS EXERCISES
+
+        11) Give a maximum width to the body and center it in the page -
+        12) Set every h1 to be centered -
+        13) Change the color of each link in the page -
+        14) Create a class with a border -
+        15) Set table to have rounded corners -
+        16) Add margin between every paragraph -
+        17) Create a class which change font size and boldness -
+        18) Create a class to hide a content -
+        19) Add a green border to each td -
+        20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) ) -
+
+        JS EXERCISES
+
+        21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe" -
+        22) Create an object with properties such name, surname, email -
+        23) Delete Email from the previously created object -
+        24) Create an array with 10 strings in it -
+        25) Print in the console every string in the previous array -
+        26) Create an array with 100 random numbers in it -
+        27) Wrote a function to get the MAX and the MIN from the previously created array -
+        28) Create an array of arrays, in which every array has 10 random numbers -
+        29) Create a function that gets 2 arrays and returns the longest one -
+        30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values -
+
+        DOM 
+
+        31) Get element with ID "container" from the page
+        32) Get every "td" from the page
+        33) Create a cycle that prints the text inside every td of the page
+        34) Write a function to change the heading of the page
+        35) Write a function to add an extra row to the table
+        36) Write a function to add the class "test" to each row in the table
+        37) Write a function to add a red background to every link in the page
+        38) Console log "Page loaded" when the page is correctly loaded
+        39) Write a function to add new items to a UL
+        40) Write a function to empty a list
+
+        EXTRA 
+
+        41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+        42) Add a button to hide every image on the page
+        43) Add a button to hide and show the table from the page
+        44) Write a function to sum every number inside the TD (if the content is numeric)
+        45) Delete the last letter from the title each time the user clicks on it
+        46) Change a single TD background color when the user clicks on it
+        47) Add a button DELETE, on click it should delete a random TD from the page
+        48) Add a pink border to a cell when the mouse is over it
+        49) Write a function to add a table with 4 rows and 3 columns programmatically
+        50) Write a function to remove the table from the page
+    -->
+
+
+    <head>
+        <style>
+            body{
+                max-width: 150vh;
+                margin: auto;
+            }
+            h1{
+                text-align: center;
+            }
+            p{
+                margin: 3vw;
+            }
+            div#main-page{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            a{
+                color: black;
+            }
+            img{
+                width: 40vh;
+            }
+            table{
+                border: solid black 2px;
+                width: 90%;
+                height: 100vw;
+                border-collapse: separate;
+                border-radius: 30px;
+                padding: 5px;
+            }
+            td {
+                border-collapse: collapse;
+                text-align: center;
+                border: solid green 1px;
+            }
+            tr.dotted td{
+                border-bottom: dotted red 2px;
+                border-collapse: collapse;
+                border-top: dotted red 2px;
+            }
+            hr{
+                color: black;
+            }
+            footer{
+                text-align: center;
+            }
+            .border{
+                padding: 5vw;
+                border: solid black 1px;
+            }
+            .font-bold{
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .hide{
+                visibility: hidden;
+            }
+        </style>
+        <title>Strive Benchmark</title>
+    </head>
+    <body>
+        <h1>My Title</h1>
+        <hr>
+        <div id="container">
+        <ol class="ordered-list">
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+        <div id="parag-ul">
+            <p>Anchor links for the colors :</p>
+            <ul>
+                <li><a class="link" href="#yellow">Yellow</a></li>
+                <li><a class="link" href="#light-blue">Light-Blue</a></li>
+                <li><a class="link" href="#green">Green</a></li>
+                <li><a class="link" href="#lavander">Lavander</a></li>
+            </ul>
+        </div>
+        <table>
+            <tr class="dotted">
+                <td>1</td>
+                <td><a name="lavander"><img src="lavander.jpg"/></a></th>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr class="dotted">
+                <td>one</td>
+                <td><a name="green"><img src="green.jpg"/></a></td>
+                <td>three</td>
+                <td colspan="2">four/five</td>
+            </tr>
+            <tr class="dotted">
+                <td>uno</td>
+                <td><a name="light-blue"></a><img src="light-blue.jpg"/></td>
+                <td>tre</td>
+                <td>quattro</td>
+                <td>cinque</td>
+            </tr>
+            <tr class="dotted">
+                <td>uno</td>
+                <td><a name="yellow"><img src="yellow.jpg"/></a></td>
+                <td>tres</td>
+                <td>cuatro</td>
+                <td>cinco</td>
+            </tr>
+        </table>
+    </div>
+    <footer>Luna Selene Sarmiento Martinez, 21 - via Enzo Ferrari 12, BO</footer>
+    <script>
+        console.log("Exercise 21")
+let x = "Jhon"
+let y = "Doe"
+console.log(x, " <> ", y)
+console.log("Exercise 22")
+let person = {
+    name: "Luna",
+    surname: "Sarmiento",
+    email: "selene942008@hotmail.com"
+}
+console.log(person)
+console.log("Exercise 23")
+ delete person.email
+ console.log(person)
+let colors = ["orange", "red", "pink", "violet", "green", "blue", "black", "gold", "white", "yellow"]
+console.log("Exercise 24/25")
+console.log(colors)
+console.log("Exercise 26")
+let randomNumbers = []
+while (randomNumbers.length <= 100){
+    randomN = Math.floor(Math.random()*500)
+    randomNumbers.push(randomN + 1)
+}
+console.log(randomNumbers)
+console.log("Exercise 27")
+const minAndMaxNumbers = function(){
+    let min = Math.min(...randomNumbers)
+    let max = Math.max(...randomNumbers)
+    console.log("Min and Max: ", min, max)
+}
+minAndMaxNumbers()
+console.log("Exercise 28")
+let bigArray = []
+while(bigArray.length < 5){
+    let arr = []
+    for(let i=0; i<10; i++){
+        let randomNum = Math.floor(Math.random()*100)
+        arr.push(randomNum + 1)
+        
+    }
+    bigArray.push(arr)   
+}
+console.log(bigArray)
+console.log("Exercise 29")
+let arr1 = ["Hello ","my ","name ","is ","Luna!"]
+let arr2 = ["Hi! ","I'm", "Luna."]
+const longestArr = function(){
+    let x = arr1.length
+    let y = arr2.length
+    if (x > y){
+        console.log("The first array is the longest")
+    } else {
+        console.log("The second array is the longest")
+    }
+}
+longestArr()
+console.log("Exercise 30")
+let nArray1 = [1,2,3,4,5,6]
+let nArray2 = [7,8,9,10,11]
+const biggestSumArray = function(){
+    let sum1 = 0
+    let sum2 = 0
+    for (let i = 0; i < nArray1.length; i++) {  
+        sum1 = sum1 + nArray1[i];  
+     }
+     for (let i = 0; i < nArray2.length; i++) {  
+        sum2 = sum2 + nArray2[i];  
+     }
+     if(sum1 < sum2){
+         console.log("The sum of the second array is bigger")
+     } else {
+        console.log("The sum of the first array is bigger")
+     }
+}
+biggestSumArray()
+console.log("Exercise 31")
+let container = document.getElementById("container")
+console.log(container)
+console.log("Exercise 32")
+let td = document.getElementsByTagName("td")
+console.log(td)
+console.log("Exercise 33")
+for(let i=0; i< td.length; i++){
+    console.log(td[i].innerText)
+}
+console.log("Exercise 34")
+const changeTitle = function(){
+    let oldH1 = document.getElementsByTagName("h1")[0]
+console.log("Old title was: ",oldH1.innerHTML)
+let newH1 = oldH1.innerHTML = "New Title made with JavaScript"
+console.log("New title is: ", newH1)
+}
+changeTitle()
+console.log("Exercise 35")
+const createTableRow = function(){
+    let table = document.getElementsByTagName("tbody")[0]
+let newRow = document.createElement("tr")
+table.appendChild(newRow)
+console.log(document.getElementsByTagName("tr")[4])
+}
+createTableRow()
+
+console.log("Exercise 36")
+const addClassTest = function(){
+    let allRows = document.getElementsByTagName("tr")
+    for(let i=0; i<allRows.length; i++){
+        allRows[i].classList.add("test")
+    console.log(allRows[i].className)
+    }
+}
+addClassTest()
+console.log("Exercise 37")
+const redBackground = function(){
+    let links = document.getElementsByClassName("link")
+    for(let i=0; i<links.length; i++){
+        links[i].style.backgroundColor = "red"
+    }
+}
+redBackground()
+console.log("Exercise 38")
+const pageLoaded = function(){
+    console.log("page fully loaded")
+}
+window.onload = pageLoaded()
+console.log("Exercise 39")
+const addUL = function(){
+    let ulcontainer = document.getElementsByTagName("ul")[0]
+    let newLI = document.createElement("li")
+    ulcontainer.appendChild(newLI)
+    newLI.innerHTML = "New list item added with JS"
+    console.log(newLI)
+}
+addUL()
+console.log("Exercise 40")
+
+const emptyAList = function(){
+    let ol = document.getElementsByTagName("ol")[0]
+    console.log("Before: ", ol.innerHTML)
+    ol.innerHTML = ""
+    console.log("After: ", ol.innerHTML)
+}
+emptyAList()
+
+    </script>
+    </body>
+</html>
