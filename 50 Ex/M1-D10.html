@@ -129,6 +129,10 @@
             .hide{
                 visibility: hidden;
             }
+            button{
+                width: 100px;
+                margin-bottom: 20px;
+            }
         </style>
         <title>Strive Benchmark</title>
     </head>
@@ -149,6 +153,7 @@
                 <li><a class="link" href="#green">Green</a></li>
                 <li><a class="link" href="#lavander">Lavander</a></li>
             </ul>
+            <button onclick="removeImages()">Remove Images</button>
         </div>
         <table>
             <tr class="dotted">
@@ -316,7 +321,6 @@ const addUL = function(){
 }
 addUL()
 console.log("Exercise 40")
-
 const emptyAList = function(){
     let ol = document.getElementsByTagName("ol")[0]
     console.log("Before: ", ol.innerHTML)
@@ -324,6 +328,27 @@ const emptyAList = function(){
     console.log("After: ", ol.innerHTML)
 }
 emptyAList()
+console.log("Exercise 41")
+const mouseLink = function(event){
+let links = document.getElementsByClassName("link")
+for(let i=0; i<links.length; i++){
+    links[i].addEventListener("mouseover", function(){
+        alert("Your on a link")
+    })
+}
+}
+mouseLink()
+console.log("Exercise 42")
+let box = document.getElementById("parag-ul")
+box.style.display = "flex"
+box.style.flexDirection = "column"
+box.style.alignItems = "center"
+const removeImages = function(onclick){
+    let images = document.getElementsByTagName("img")
+    for(let i=0; i<images.length; i++){
+        images[i].src = ""
+    }
+}
 
     </script>
     </body>
