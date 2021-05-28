@@ -138,7 +138,7 @@
         <title>Strive Benchmark</title>
     </head>
     <body>
-        <h1>My Title</h1>
+        <h1 onclick="removeLetterH1()">My Title</h1>
         <hr>
         <div id="container">
         <ol class="ordered-list">
@@ -156,6 +156,7 @@
             </ul>
             <button onclick="removeImages()">Remove Images</button>
             <button onclick="removeTable()">Remove Table</button>
+            <button onclick="removeRandomTD()">Remove Random TD</button>
         </div>
         <table>
             <tr class="dotted">
@@ -348,7 +349,11 @@ box.style.alignItems = "center"
 const removeImages = function(onclick){
     let images = document.getElementsByTagName("img")
     for(let i=0; i<images.length; i++){
-        images[i].src = ""
+        if(images[i].style.display === "none"){
+            images[i].style.display = "list-item"
+        } else{
+            images[i].style.display = "none"
+        }
     }
 }
 console.log("Exercise 43")
@@ -369,6 +374,32 @@ const sumTd = function(){
 }
 sumTd()
 console.log("Exercise 45")
+const removeLetterH1 = function(){
+    let title = document.getElementsByTagName("h1")[0]
+    let arrayH1 = title.innerHTML.split("")
+    arrayH1.pop()
+    console.log(arrayH1)
+    title.innerHTML = arrayH1.join("")
+}
+console.log("Exercise 46")
+const tdBackgroundColor = function(){
+let arrayTD = document.getElementsByTagName("td")
+for(let i=0; i<arrayTD.length; i++){
+    arrayTD[i].onclick = function(){
+        arrayTD[i].style.backgroundColor = "red"
+    }
+    }
+}
+tdBackgroundColor()
+console.log("Exercise 47")
+const removeRandomTD = function(){
+    let arrayTD = document.getElementsByTagName("td")
+    console.log(arrayTD.length)
+    let random = Math.floor(Math.random()*18)
+    for(let i=0; i<arrayTD.length; i++){
+        arrayTD[random].style.display = "none"
+    }
+}
 
     </script>
     </body>
