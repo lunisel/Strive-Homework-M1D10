@@ -140,7 +140,7 @@
     <body>
         <h1 onclick="removeLetterH1()">My Title</h1>
         <hr>
-        <div id="container">
+        
         <ol class="ordered-list">
             <li>First</li>
             <li>Second</li>
@@ -158,6 +158,7 @@
             <button onclick="removeTable()">Remove Table</button>
             <button onclick="removeRandomTD()">Remove Random TD</button>
         </div>
+        <div id="container">
         <table>
             <tr class="dotted">
                 <td>1</td>
@@ -400,7 +401,33 @@ const removeRandomTD = function(){
         arrayTD[random].style.display = "none"
     }
 }
-
+console.log("Exercise 48")
+const pinkBackgroundTD = function(){
+    let arrayTD = document.getElementsByTagName("td")
+    for(let i=0; i<arrayTD.length; i++){
+        arrayTD[i].onmouseover = function(){
+            arrayTD[i].style.border = "solid pink 1px"    
+        }
+    }
+}
+pinkBackgroundTD()
+console.log("Exercise 49")
+const createTable = function(){
+    let container = document.getElementById("container")
+    let newTable = document.createElement("table")
+    container.appendChild(newTable)
+    newTable.style.marginTop = "20px"
+    for(let i=0; i<4; i++){
+        let newRow = document.createElement("tr")
+        newTable.appendChild(newRow)
+        for(let i=0; i<3; i++){
+        let newTD = document.createElement("td")
+        newRow.appendChild(newTD)
+        newTD.style.padding ="5vw"
+    }
+    } 
+}
+createTable()
     </script>
     </body>
 </html>
